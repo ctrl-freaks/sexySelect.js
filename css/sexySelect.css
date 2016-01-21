@@ -1,0 +1,129 @@
+body {
+  max-width: 300px;
+  padding: 20px;
+}
+/* =Custom Select Menu */
+select.sexy-select--hidden {
+  position: fixed;
+  top: -99999px;
+  visibility: hidden;
+  opacity: 0;
+}
+.sexy-select-menu {
+  display: inline-block;
+  position: relative;
+  margin: 10px;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 12px;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+.sexy-select-menu * {
+  box-sizing: border-box;
+}
+.sexy-select-menu label:hover {
+  cursor: pointer;
+}
+.sexy-select-menu.sexy-disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+.sexy-select-menu.sexy-fixed .select-toggle {
+  width: 100%;
+}
+.sexy-select-menu.sexy-fixed .select-toggle:after {
+  position: absolute;
+  left: initial;
+  right: 14px;
+  top: 14px;
+}
+.sexy-select-menu.sexy-fixed .select-toggle.open:after {
+  top: 17px;
+}
+.sexy-select-menu.sexy-fixed .select-toggle ~ ul {
+  width: 100%;
+}
+.sexy-select-menu .select-toggle {
+  position: relative;
+  display: inline-block;
+  padding: 10px 14px;
+  background: #23e5bf;
+  color: #222;
+  border-radius: 3px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.sexy-select-menu .select-toggle:after {
+  display: inline-block;
+  position: relative;
+  content: '';
+  top: -2px;
+  left: 4px;
+  width: 0;
+  height: 0;
+  border-color: #222 transparent transparent transparent;
+  border-style: solid;
+  border-width: 5px 5px 0 5px;
+}
+.sexy-select-menu .select-toggle.open {
+  background: #17be9e;
+}
+.sexy-select-menu .select-toggle.open:after {
+  margin-top: -4px;
+  border-color: transparent transparent #222 transparent;
+  border-width: 0 5px 5px 5px;
+}
+.sexy-select-menu .select-toggle.open ~ ul {
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 0.4s;
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -ms-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+}
+.sexy-select-menu .select-toggle ~ ul {
+  position: absolute;
+  display: table;
+  max-height: 0;
+  padding: 0;
+  left: 0;
+  margin: 0;
+  overflow: hidden;
+  z-index: 999;
+  pointer-events: none;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.4s;
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -ms-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+}
+.sexy-select-menu ul li {
+  display: table-row;
+}
+.sexy-select-menu ul li span {
+  display: table-cell;
+  min-width: 100%;
+  background: #ededed;
+  color: #333;
+  padding: 7px 14px;
+  font-family: 'Helvetica', sans-serif;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.sexy-select-menu ul li span:hover {
+  cursor: pointer;
+}
+.sexy-select-menu ul li span.active {
+  color: #fff;
+  background: #666;
+}
+.sexy-select-menu ul li span.selected {
+  color: #fff;
+  background: #333;
+}

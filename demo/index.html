@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link rel="stylesheet" href="../css/sexySelect.css?v=0.2.9">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+	<h3>Normal</h3>
+	<select name="test-select" class="sexy-select">
+	  <option>Test 1</option>
+	  <option>Test 2</option>
+	  <option>Test 3</option>
+	</select>
+	<h3>Selected Option</h3>
+	<select id="test-id" name="test-select" class="sexy-select">
+	  <option>Test 1</option>
+	  <option>Test 2</option>
+	  <option selected="selected">Test 3</option>
+	</select>
+	<h3>Longer Selected Option</h3>
+	<select id="test-id" name="test-select" class="sexy-select">
+	  <option>Test 1</option>
+	  <option>Test 2</option>
+	  <option selected="selected">Test with longer name</option>
+	</select>
+	<h3>Disabled</h3>
+	<select disabled="disabled" class="sexy-select">
+	  <option>Test 4</option>
+	  <option selected="selected">Test 5</option>
+	  <option>Test Longer Text man</option>
+	</select>
+	<h3>Fixed Width</h3>
+	<select class="sexy-select-fixed">
+	  <option>Test 4</option>
+	  <option selected="selected">Test 5</option>
+	  <option>Test Longer Text man</option>
+	</select>
+	<h3>Control</h3>
+	<select class="control">
+	  <option>This is the control tag</option>
+	  <option>Test 7</option>
+	</select>
+	<h3>Disabled Control</h3>
+	<select disabled="disabled" class="control">
+	  <option>This is the control tag</option>
+	  <option>Test 7</option>
+	</select>
+
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="../js/min/jquery.sexySelect.min.js"></script>
+
+  <script>
+
+  	(function($){
+		  // initialize
+
+		  var sexies = $('.sexy-select').sexySelect();
+
+		  var sexiesFixed = $('.sexy-select-fixed').sexySelect({
+		    width: '100%'
+		  });
+		}(jQuery));
+  </script>
+
+</body>
+</html>
